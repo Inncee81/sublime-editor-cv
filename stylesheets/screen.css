@@ -1,0 +1,301 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+@font-face {
+  font-family: Consolas;
+  src: url(../fonts/Consolas.ttf);
+}
+/* line 39, ../sass/screen.scss */
+.sublime body {
+  font-family: 'Consolas', monaco;
+  font-weight: 300;
+  font-size: 1.3em;
+}
+/* line 45, ../sass/screen.scss */
+.sublime .spaced,
+.sublime .ruleset,
+.sublime .notice {
+  margin-bottom: 24px;
+  /* [1] */
+  margin-bottom: 1.5rem;
+  /* [1] */
+}
+/* line 51, ../sass/screen.scss */
+.sublime .spaced--large {
+  margin-bottom: 72px;
+  margin-bottom: 4.5rem;
+}
+/* line 56, ../sass/screen.scss */
+.sublime .indented {
+  padding-left: 2.5em;
+}
+/* line 60, ../sass/screen.scss */
+.sublime .indented-array {
+  padding-left: 3.7em;
+}
+/* line 64, ../sass/screen.scss */
+.sublime {
+  line-height: 1.5;
+  /* [1] */
+  padding: 24px;
+  /* [2] */
+  padding: 1.5rem;
+  /* [2] */
+  padding-bottom: 0;
+  color: #ffffff;
+  background-color: #263238;
+}
+/* line 73, ../sass/screen.scss */
+.sublime a {
+  color: inherit;
+}
+/* line 81, ../sass/screen.scss */
+.sublime .variable {
+  color: #ffffff;
+  text-transform: lowercase;
+}
+/* line 85, ../sass/screen.scss */
+.sublime .variable:before {
+  content: "var ";
+  color: #E37D85;
+}
+/* line 90, ../sass/screen.scss */
+.sublime .variable:after {
+  content: "{";
+  color: #ffffff;
+}
+/* line 96, ../sass/screen.scss */
+.sublime .variable__delimiter {
+  position: relative;
+  white-space: pre;
+  /* [1] */
+}
+/* line 100, ../sass/screen.scss */
+.sublime .variable__delimiter:before {
+  content: "-";
+  position: absolute;
+  display: inline-block;
+  width: .625em;
+  text-align: center;
+}
+/* line 111, ../sass/screen.scss */
+.sublime .equals:before {
+  content: " = ";
+  color: #4CB3E6;
+}
+/* line 119, ../sass/screen.scss */
+.sublime .declarations:after {
+  content: "}";
+  /* [1] */
+  color: #4CB3E6;
+}
+/* line 126, ../sass/screen.scss */
+.sublime .property {
+  text-transform: lowercase;
+  float: left;
+  clear: both;
+  padding-left: 1.3em;
+  /* [1] */
+  color: #D5EBB3;
+}
+/* line 133, ../sass/screen.scss */
+.sublime .property:before, .sublime .property:after {
+  content: "\"";
+  color: #4CB3E6;
+}
+/* line 139, ../sass/screen.scss */
+.sublime .property:after {
+  content: "\":\00A0";
+  /* [2] */
+  color: #4CB3E6;
+}
+/* line 146, ../sass/screen.scss */
+.sublime .value {
+  color: #D5EBB3;
+  padding-left: 2.5em;
+}
+/* line 151, ../sass/screen.scss */
+.sublime .value:after {
+  content: ",";
+  color: #ffffff;
+}
+/* line 158, ../sass/screen.scss */
+.sublime .value-last {
+  color: #D5EBB3;
+  padding-left: 2.5em;
+}
+/* line 162, ../sass/screen.scss */
+.sublime .value-last:after {
+  content: "";
+  color: #D5EBB3;
+}
+/* line 168, ../sass/screen.scss */
+.sublime .value-array {
+  color: #D5EBB3;
+  padding-left: 4em;
+}
+/* line 174, ../sass/screen.scss */
+.sublime .array:before {
+  content: " [";
+  color: #ffffff;
+}
+/* line 181, ../sass/screen.scss */
+.sublime .array-end:before {
+  content: "]";
+  padding-left: 1.3em;
+  color: #ffffff;
+}
+/* line 191, ../sass/screen.scss */
+.sublime .property-tabbed {
+  padding-left: 5.2em;
+}
+/* line 195, ../sass/screen.scss */
+.sublime .end-parentheses {
+  padding-left: 2.5em;
+  color: #D5EBB3;
+}
+/* line 200, ../sass/screen.scss */
+.sublime .string {
+  color: #D5EBB3;
+}
+/* line 203, ../sass/screen.scss */
+.sublime .string:before, .sublime .string:after {
+  content: "\"";
+  color: #4CB3E6;
+}
+/* line 210, ../sass/screen.scss */
+.sublime .number {
+  color: #E37D85;
+}
+/* line 214, ../sass/screen.scss */
+.sublime .array-list {
+  list-style: none;
+  display: inline;
+}
+/* line 218, ../sass/screen.scss */
+.sublime .array-list > li {
+  display: list-item;
+}
+/* line 221, ../sass/screen.scss */
+.sublime .array-list > li:before, .sublime .array-list > li:after {
+  content: "\"";
+}
+/* line 226, ../sass/screen.scss */
+.sublime .array-list > li:after {
+  content: "\", ";
+  color: #ffffff;
+}
+/* line 231, ../sass/screen.scss */
+.sublime .array-list > li:last-child:after {
+  content: "\"";
+  color: #D5EBB3;
+}
+/* line 240, ../sass/screen.scss */
+.sublime .comment {
+  color: #3D5059;
+}
+/* line 243, ../sass/screen.scss */
+.sublime .comment:before {
+  content: "/* ";
+}
+/* line 247, ../sass/screen.scss */
+.sublime .comment:after {
+  content: " */";
+}
+/* line 253, ../sass/screen.scss */
+.sublime .comment-block {
+  color: #3D5059;
+}
+/* line 256, ../sass/screen.scss */
+.sublime .comment-block:before, .sublime .comment-block:after {
+  display: block;
+}
+/* line 261, ../sass/screen.scss */
+.sublime .comment-block:before {
+  content: "/**";
+}
+/* line 265, ../sass/screen.scss */
+.sublime .comment-block:after {
+  content: "\00A0*/";
+}
+/* line 271, ../sass/screen.scss */
+.sublime .comment-block__line {
+  display: block;
+}
+/* line 274, ../sass/screen.scss */
+.sublime .comment-block__line:before {
+  content: "\00A0*\00A0";
+}
+/* line 280, ../sass/screen.scss */
+.sublime .notice {
+  display: block !important;
+  /* [1] */
+}
+
+/*END CLASS*/
