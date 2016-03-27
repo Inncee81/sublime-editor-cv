@@ -1,0 +1,270 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+@font-face {
+    font-family: Consolas;
+    src: url(../fonts/Consolas.ttf);
+}
+
+.sublime {
+
+    $tab-size:  4;
+
+    $color--background:     #263238;
+    $color--white:          #ffffff;
+    $color--grey--light:    #3D5059;
+    $color--grey--dark:     #6B6B6B;
+    $color--blue--grey:     #263238;
+    $color--navy:           #263238;
+    $color--blue--medium:   #546E7A;
+    $color--blue--light:    #4CB3E6;
+    $color--yellow:         #D5EBB3;
+    $color--red:            #E37D85;
+
+    $color--text:           $color--white;
+    $color--comment:        $color--grey--light;
+    $color--variable:       $color--red;
+    $color--variable-name:  $color--white;
+    $color--braces:         $color--blue--light;
+    $color--property:       $color--yellow;
+    $color--value:          $color--yellow;
+    $color--colons:         $color--blue--light;
+    $color--string:         $color--yellow;
+    $color--number:         $color--red;
+
+    body {
+        font-family: 'Consolas', monaco;
+        font-weight: 300;
+        font-size: 1.3em;
+    }
+
+    .spaced,
+    %spaced {
+        margin-bottom: 24px;
+        margin-bottom: 1.5rem;
+    }
+
+    .spaced--large {
+        margin-bottom: 3 * 24px;
+        margin-bottom: 3 * 1.5rem;
+    }
+
+    .indented {
+        padding-left: ($tab-size * .625) +em;
+    }
+
+    .indented-array {
+        padding-left: ($tab-size * .925) +em;
+    }
+
+    & {
+        line-height: 1.5;
+        padding: 24px;
+        padding: 1.5rem;
+        padding-bottom: 0;
+        color: $color--text;
+        background-color: $color--background;
+    }
+
+    a {
+        color: inherit;
+    }
+
+    .ruleset {
+        @extend %spaced;
+    }
+
+    .variable {
+        color: $color--variable-name;
+        text-transform: lowercase;
+
+        &:before {
+            content: "var ";
+            color: $color--variable;
+        }
+
+        &:after {
+            content: "{";
+            color: $color--white;
+        }
+    }
+
+    .equals {
+        &:before {
+            content: " = ";
+            color: $color--blue--light;
+        }
+    }
+
+    .declarations {
+
+        &:after {
+            content: "}";
+            color: $color--braces;
+        }
+
+    }
+
+    .property {
+        text-transform: lowercase;
+        float: left;
+        clear: both;
+        padding-left: ($tab-size * .325) +em;
+        color: $color--property;
+        
+        &:before,
+        &:after {
+            content: "\"";
+            color: $color--colons;
+        }
+
+        &:after {
+            content: "\":\00A0";
+            color: $color--colons;
+        }
+
+    }
+
+    .value {
+
+        color: $color--value;
+        padding-left: ($tab-size * .625) +em;
+
+        &:after {
+            content: ",";
+            color: $color--white;
+        }
+
+    }
+
+    .value-last {
+        color: $color--yellow;
+        padding-left: ($tab-size * .625) +em;
+
+        &:after {
+            content: "";
+            color: $color--yellow;
+        }
+    }
+
+    .value-array {
+        color: $color--value;
+        padding-left: ($tab-size * 1.0) +em;
+    }
+
+    .array {
+        &:before {
+            content: " [";
+            color: $color--white;
+        }
+    }
+
+    .array-end {
+        &:before {
+            content: "]";
+            padding-left: ($tab-size * .325) +em;
+            color: $color--white;
+        }
+    }
+
+    .property-tabbed {
+        padding-left: ($tab-size * 1.3) +em;
+    }
+
+    .end-parentheses {
+        padding-left: ($tab-size * .625) +em;
+        color: $color--string;
+    }
+
+    .string {
+        color: $color--string;
+
+        &:before,
+        &:after {
+            content: "\"";
+            color: $color--blue--light;
+        }
+    }
+
+    .number {
+        color: $color--number;
+    }
+
+    .array-list {
+        list-style: none;
+        display: inline;
+
+        > li {
+            display: list-item;
+            
+            &:before,
+            &:after {
+                content: "\"";
+            }
+
+            &:after {
+                content: "\", ";
+                color: $color--white;
+            }
+
+            &:last-child:after {
+                content: "\"";
+                color: $color--yellow;
+            }
+
+        }
+
+    }
+
+    .comment {
+        color: $color--comment;
+
+        &:before {
+            content: "/* ";
+        }
+
+        &:after {
+            content: " */";
+        }
+
+    }
+
+    .comment-block {
+        color: $color--comment;
+
+        &:before,
+        &:after {
+            display: block;
+        }
+
+        &:before {
+            content: "/**";
+        }
+
+        &:after {
+            content: "\00A0*/";
+        }
+
+    }
+
+        .comment-block__line {
+            display: block;
+
+            &:before {
+                content: "\00A0*\00A0";
+            }
+
+        }
+
+    .notice {
+        @extend %spaced;
+        display: block !important;
+    }
+
+
+}/*END CLASS*/
+
